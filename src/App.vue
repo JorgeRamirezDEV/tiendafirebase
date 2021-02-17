@@ -1,17 +1,27 @@
 <template>
   <div id="app">
+    <cabecera/>
+    <productos/>
+    <novedades/>
+    <pie/>
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import cabecera from './components/cabecera.vue'
+import pie from './components/pie.vue'
+import novedades from './components/novedades.vue'
+import productos from './components/productos.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    cabecera,
+    pie,
+    novedades,
+    productos
   }
 }
 </script>
@@ -23,6 +33,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
 </style>
