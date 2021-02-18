@@ -49,7 +49,4 @@
 </script>
 
 <style>
-  .productos {
-
-  }
 </style>

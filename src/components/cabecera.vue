@@ -52,8 +52,5 @@
 </script>
 
 <style>
-  .cabecera {
-    
-  }
 
 </style>
