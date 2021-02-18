@@ -31,7 +31,4 @@
 </script>
 
 <style>
-  .pie {
-
-  }
 </style>
