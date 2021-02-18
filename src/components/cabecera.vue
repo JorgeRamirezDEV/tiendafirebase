@@ -1,28 +1,26 @@
 <template lang="html">
 
   <section class="cabecera">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand">Medio'l Mar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-    </div>
-    </nav>
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/wave.png" width="30" height="30" class="mr-2 d-inline-block align-top" alt="">
+          Medio´l Mar
+        </a>
+        <div class="d-flex">
+          <div class="mr-auto">
+            <a class="btn btn-info text-white px-2">
+              <font-awesome-icon class="text-white fa-lg" icon="shopping-cart" />   
+              <span class="ml-2"> Carrito     </span>
+            </a>
+          </div>
+          <div class="ml-4">
+            <a class="btn btn-primary"> Log in </a>
+          </div>
+          <div class="ml-2">
+            <a class="btn btn-danger"> Log out </a>
+          </div>
+        </div>
+      </nav>
   </section>
 
 </template>

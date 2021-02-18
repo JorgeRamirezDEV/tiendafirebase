@@ -7,7 +7,8 @@
         <img class="card-img-top" v-bind:src='consola.imagen'>
         <div class="card-body">
           <h4 class="card-title">{{consola.nombre}}</h4>
-          <p>{{consola.descripcion}}</p>
+          <p class="card-text">{{consola.descripcion}}</p>
+          <a href="" class="btn btn-primary">Añadir a la cesta </a>
         </div>
       </div>
     </div>
