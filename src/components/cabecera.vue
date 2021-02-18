@@ -1,10 +1,9 @@
 <template lang="html">
 
   <section class="cabecera">
-      <nav class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-dark bg-light border-bottom">
         <a class="navbar-brand" href="#">
-          <img src="../assets/wave.png" width="30" height="30" class="mr-2 d-inline-block align-top" alt="">
-          Medio´l Mar
+          <img src="../assets/logo.png" style="width: 300px" class="mr-2 d-inline-block align-top" alt="">
         </a>
         <div class="d-flex">
           <div class="mr-auto">

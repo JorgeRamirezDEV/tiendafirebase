@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <cabecera/>
-    <productos/>
     <novedades/>
+    <productos/>
     <pie/>
-    <img alt="Vue logo" src="./assets/logo.png">
   </div>
 </template>
 
@@ -22,6 +21,15 @@ export default {
     pie,
     novedades,
     productos
+  },
+  create() {
+        window.addEventListener("load", this.onWindowLoad);
+  },
+  methods: {
+    onWindowLoad() {
+            console.log("window load event");
+    }
+
   }
 }
 </script>
