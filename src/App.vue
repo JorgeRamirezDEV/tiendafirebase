@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <cabecera/>
+    <carrito/>
+    <login/>
     <novedades/>
     <productos/>
     <pie/>
@@ -13,6 +15,8 @@ import cabecera from './components/cabecera.vue'
 import pie from './components/pie.vue'
 import novedades from './components/novedades.vue'
 import productos from './components/productos.vue'
+import carrito from './components/carrito.vue'
+import login from './components/login.vue'
 
 export default {
   name: 'App',
@@ -20,17 +24,11 @@ export default {
     cabecera,
     pie,
     novedades,
-    productos
-  },
-  create() {
-        window.addEventListener("load", this.onWindowLoad);
-  },
-  methods: {
-    onWindowLoad() {
-            console.log("window load event");
-    }
-
+    productos,
+    carrito,
+    login
   }
+  
 }
 </script>
 

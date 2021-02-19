@@ -12,7 +12,7 @@
       </div>
       <div class="mb-3">
         <p class="font-weight-light">Esta página es un proyecto realizado solo con fines educativos.</p>
-        <a class="font-weight-light font-italic text-dark"> Jorge Ramírez Molina</a>
+        <small class="font-weight-light text-dark"> Jorge Ramírez Molina</small>
       </div>    
     </div>
       
