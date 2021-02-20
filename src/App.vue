@@ -1,37 +1,24 @@
 <template>
   <div id="app">
     <cabecera/>
-    <carrito/>
-    <login/>
-    <novedades/>
-    <productos/>
-    <pie/>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
+    <novedades/>
+    <pie/>
   </div>
 </template>
 
 <script>
 
 import cabecera from './components/cabecera.vue'
+import Novedades from './components/novedades.vue'
 import pie from './components/pie.vue'
-import novedades from './components/novedades.vue'
-import productos from './components/productos.vue'
-import carrito from './components/carrito.vue'
-import login from './components/login.vue'
 
 export default {
   name: 'App',
   components: {
     cabecera,
     pie,
-    novedades,
-    productos,
-    carrito,
-    login
+    Novedades
   }
   
 }

@@ -1,6 +1,6 @@
 <template lang="html">
 
-  <section id="loginbody" class="login d-flex justify-content-center">
+  <section id="loginbody" class="login mt-3 d-flex justify-content-center">
     <div class="shadow p-3 py-4 mx-5 bg-white rounded border-primary border-bottom" style="max-width: 1000px">
       <h3 class="text-center mb-5 pb-2 ml-3 ml-md-5 font-weight-bold"> Iniciar Sesión </h3>
       <div class="form-row pb-5 m-md-5 m-2 border-bottom">

@@ -2,18 +2,18 @@
 
   <section class="cabecera">
       <nav class="navbar navbar-dark bg-light border-bottom">
-        <a class="navbar-brand" href="#">
+        <router-link class="navbar-brand" href="#" to="/Middle">
           <img src="../assets/logo.png" style="width: 300px" class="mr-2 d-inline-block align-top" alt="">
-        </a>
+        </router-link>
         <div class="d-flex">
           <div class="mr-auto">
-            <a class="btn btn-info text-white px-2">
+            <router-link class="btn btn-info" to="/">
               <font-awesome-icon class="text-white fa-lg" icon="shopping-cart" />   
               <span class="ml-2"> Carrito     </span>
-            </a>
+            </router-link>
           </div>
           <div class="ml-4">
-            <a class="btn btn-primary"> Log in </a>
+            <router-link class="btn btn-primary" to="/Login">Log in</router-link>
           </div>
           <div class="ml-2">
             <a class="btn btn-danger"> Log out </a>
