@@ -1,7 +1,7 @@
 <template lang="html">
 
   <section class="carrito" >
-      <div class="shadow p-3 m-5 bg-white rounded"> 
+      <div class="shadow p-3 m-5 bg-white rounded border-primary border-bottom"> 
         <h3 class="text-center mb-5 pb-2 ml-3 ml-md-5 font-weight-bold" >Carrito</h3>
         <div class="my-3">
           <div class="container row">
