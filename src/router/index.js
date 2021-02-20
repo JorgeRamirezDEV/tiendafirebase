@@ -8,7 +8,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/carrito',
     name: 'Carrito',
     component: Carrito
   },
@@ -21,7 +21,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "Login" */ '../views/Login.vue')
   },
   {
-    path: '/Middle',
+    path: '/',
     name: 'Middle',
     component: Middle
   }

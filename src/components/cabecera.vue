@@ -2,12 +2,12 @@
 
   <section class="cabecera">
       <nav class="navbar navbar-dark bg-light border-bottom">
-        <router-link class="navbar-brand" href="#" to="/Middle">
+        <router-link class="navbar-brand" href="#" to="/">
           <img src="../assets/logo.png" style="width: 300px" class="mr-2 d-inline-block align-top" alt="">
         </router-link>
         <div class="d-flex">
           <div class="mr-auto">
-            <router-link class="btn btn-info" to="/">
+            <router-link class="btn btn-info" to="/carrito">
               <font-awesome-icon class="text-white fa-lg" icon="shopping-cart" />   
               <span class="ml-2"> Carrito     </span>
             </router-link>
