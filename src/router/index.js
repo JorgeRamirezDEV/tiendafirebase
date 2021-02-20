@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Carrito from '../views/Carrito.vue'
 import Middle from '../views/Middle.vue'
 
 
@@ -10,7 +9,7 @@ const routes = [
   {
     path: '/carrito',
     name: 'Carrito',
-    component: Carrito
+    component: () => import('../views/Carrito.vue')
   },
   {
     path: '/Login',
@@ -18,7 +17,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (Login.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Login" */ '../views/Login.vue')
+    component: () => import('../views/Login.vue')
   },
   {
     path: '/',
