@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <cabecera/>
-    <addproductos/>
     <router-view/>
     <novedades/>
     <pie/>
@@ -13,15 +12,13 @@
 import cabecera from './components/cabecera.vue'
 import novedades from './components/novedades.vue'
 import pie from './components/pie.vue'
-import addproductos from './components/addproductos.vue'
 
 export default {
   name: 'App',
   components: {
     cabecera,
     pie,
-    novedades,
-    addproductos
+    novedades
   }
   
 }

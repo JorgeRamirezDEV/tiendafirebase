@@ -12,7 +12,12 @@
           <label class="font-weight-bold ml-md-4">Password</label>
           <input type="password" class="form-control  ml-md-4">
         </div>
-        <a class="btn btn-primary  mt-4"> Iniciar Sesión </a>
+        <a class="btn btn-primary  mt-4 mr-4"> Iniciar Sesión </a>
+        <div>
+          <a class="btn btn-info  mt-4 ml-5 mx-2"> Google </a>
+          <a class="btn btn-primary mt-4 mx-2"> Facebook </a>
+          <a class="btn btn-danger float-right mt-4 mx-2"> Twitter </a>
+        </div>
       </div>
       <h3 class="text-center my-5 pb-2 ml-3 ml-md-5 font-weight-bold"> Registro </h3>
       <div class="form-row m-md-5 m-2">
