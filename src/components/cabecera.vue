@@ -20,11 +20,13 @@
               <span class="ml-2"> Carrito     </span>
             </router-link>
           </div>
-          <div class="ml-4">
-            <router-link class="btn btn-primary" to="/Login">Usuario</router-link>
-          </div>
-          <div class="ml-2">
-            <a class="btn btn-danger" v-if="!sesioniniciada" @click="logout"> Log out </a>
+          <div>
+            <div class="ml-4" v-if="user.loggedIn">
+              <router-link class="btn btn-primary" to="/Login">Usuario</router-link>
+            </div>
+            <div class="ml-2" v-else>
+              <a class="btn btn-danger"  @click="logout"> Log out </a>
+            </div>
           </div>
         </div>
       </nav>
@@ -40,6 +42,7 @@
     name: 'cabecera',
     props: [],
     mounted () {
+      Firebase.estadoUsuario()
 
     },
     data () {
@@ -56,15 +59,14 @@
 
       logout(){
         Firebase.logout()
+      },
+
+      comprobarSesion(){
+        this.user.loggedIn = Firebase.usuarioConectado()
       }
 
     },
     computed: {
-
-      sesioniniciada(){
-        return this.user.loggedIn
-      }
-
     }
 }
 

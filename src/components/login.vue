@@ -63,7 +63,6 @@
     data () {
       return {
         user:{
-          loggedIn: false,
           data:{}
         }
 
