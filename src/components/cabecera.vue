@@ -7,7 +7,7 @@
         </router-link>
         <div class="d-flex">
           <div class="mr-auto">
-            <router-link class="btn btn-info" to="/addproductos">
+            <router-link class="btn btn-info" to="/addproductos" v-if="user.loggedIn">
               <font-awesome-icon class="text-white fa-lg" icon="user" />   
               <span class="ml-2"> Administrar</span>
             </router-link>
