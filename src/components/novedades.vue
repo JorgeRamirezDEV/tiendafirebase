@@ -51,5 +51,12 @@
 
 </script>
 
-<style>
+<style lang="scss">
+
+h1{
+
+  background-color: blue;
+
+}
+
 </style>
