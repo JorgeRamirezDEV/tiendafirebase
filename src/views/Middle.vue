@@ -11,7 +11,7 @@ import productos from '../components/productos.vue'
 
 
 export default {
-  name: 'pepe',
+  name: 'middle',
   components: {
     productos
   }

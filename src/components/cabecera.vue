@@ -21,10 +21,10 @@
             </router-link>
           </div>
           <div>
-            <div class="ml-4" v-if="user.loggedIn">
+            <div class="ml-4" v-if="!user.loggedIn">
               <router-link class="btn btn-primary" to="/Login">Usuario</router-link>
             </div>
-            <div class="ml-2" v-else>
+            <div class="ml-4" v-else>
               <a class="btn btn-danger"  @click="logout"> Log out </a>
             </div>
           </div>
@@ -36,13 +36,26 @@
 
 <script lang="js">
 
-  import Firebase from '../db.js'
+  import firebase from '../db.js'
+  import Firebase from 'firebase'
 
   export default  {
     name: 'cabecera',
     props: [],
     mounted () {
-      Firebase.estadoUsuario()
+
+      Firebase.auth().onAuthStateChanged(user => {
+        if (user){
+          this.user.loggedIn = true;
+          this.user.data = user;
+          
+        }
+        else{
+          this.user.loggedIn = false;
+          this.user.data = {};
+          
+        }
+      })
 
     },
     data () {
@@ -58,11 +71,7 @@
     methods: {
 
       logout(){
-        Firebase.logout()
-      },
-
-      comprobarSesion(){
-        this.user.loggedIn = Firebase.usuarioConectado()
+        firebase.logout()
       }
 
     },
@@ -74,5 +83,6 @@
 </script>
 
 <style>
+
 
 </style>

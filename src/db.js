@@ -2,8 +2,6 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
 
-let sesionIniciada = false
-let usuarioActivo = []
 
 
 var firebaseConfig = {
@@ -43,28 +41,7 @@ export default {
       .catch(function(error){
         console.log(error)
       })
-    },
-
-    estadoUsuario (){
-    firebase.auth().onAuthStateChanged( user => {
-      if (user) {
-        sesionIniciada = true;
-        usuarioActivo = user;
-        console.log(sesionIniciada);
-        console.log(usuarioActivo);
-      }
-      else {
-        sesionIniciada = false;
-        usuarioActivo = {};
-      }
-    })
-    },
-
-    usuarioConectado (){
-      if (sesionIniciada){
-        return true;
-      }
-      else { false }
     }
+    
      
 }
