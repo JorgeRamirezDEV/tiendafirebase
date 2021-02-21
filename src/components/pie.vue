@@ -15,7 +15,6 @@
         <small class="font-weight-light text-dark"> Jorge Ramírez Molina</small>
       </div>    
     </div>
-      
   </section>
 
 </template>
@@ -44,5 +43,5 @@
 
 </script>
 
-<style>
+<style scoped lang="scss">
 </style>

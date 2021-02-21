@@ -16,22 +16,22 @@
         <div>
           <a class="btn btn-info  mt-4 ml-5 mx-2" @click="login"> Google </a>
           <a class="btn btn-primary mt-4 mx-2"> Facebook </a>
-          <a class="btn btn-danger float-right mt-4 mx-2"> Twitter </a>
+          <a class="btn btn-danger float-right mt-4 mx-2" @click="logintwitter"> Twitter </a>
         </div>
       </div>
       <h3 class="text-center my-5 pb-2 ml-3 ml-md-5 font-weight-bold"> Registro </h3>
       <div class="form-row m-md-5 m-2">
         <div class="form-group col-md-6">
           <label class="font-weight-bold">Nombre</label>
-          <input type="name" v-model="form.nombre" class="form-control">
+          <input type="name"  class="form-control">
         </div>
         <div class="form-group col-md-6 ">
           <label class="font-weight-bold mx-md-4">Apellidos</label>
-          <input type="surname" v-model="form.apellido" class="form-control ml-md-4">
+          <input type="surname"  class="form-control ml-md-4">
         </div>
         <div class="form-group col-md-6">
           <label class="font-weight-bold">Email</label>
-          <input type="email" v-model="form.email" class="form-control" style="max-width: 500px">
+          <input type="email" class="form-control" style="max-width: 500px">
         </div>
         <div class="form-group col-md-6">
         </div>
@@ -41,7 +41,7 @@
         </div>
         <div class="form-group col-md-6 ">
           <label class="font-weight-bold mx-md-4">Repite la contraseña</label>
-          <input type="password"  v-model="form.password" class="form-control mx-md-4">
+          <input type="password" class="form-control mx-md-4">
         </div>
         <a class="btn btn-success mt-4"> Registrarse </a>
       </div> 
@@ -71,6 +71,9 @@
     methods: {
       login(){
         Firebase.login();
+      },
+      logintwitter(){
+        Firebase.logintwitter();
       }
 
     },
@@ -86,7 +89,7 @@
 
 </script>
 
-<style>
+<style scoped lang="scss">
 
 #loginbody {
   text-align: left;

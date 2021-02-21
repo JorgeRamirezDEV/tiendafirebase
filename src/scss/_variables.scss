@@ -1,0 +1,18 @@
+// // creamos la paleta de colores que usaremos para nuestra página web
+
+
+$color1: rgb(111, 212, 111);
+$color2: rgb(48, 179, 48);
+$color3: rgb(78, 78, 194);
+
+
+/// Bootstrap color variables
+$theme-colors: () !default;
+$theme-colors: map-merge(
+    (
+        "primary-color": $color1,
+        "secondary-color": $color2,
+        "tertiary-color": $color3
+    ),
+    $theme-colors
+);

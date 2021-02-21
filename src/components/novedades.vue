@@ -1,7 +1,7 @@
 <template lang="html">
 
   <section class="novedades my-5">
-    <h1>Novedades</h1>
+    <h1 class="titulo">Novedades</h1>
     <div class="row d-flex my-5 mx-0 justify-content-center">
       <div v-for="novedad in datos" v-bind:key="novedad.id" class="bg-light card m-1 mx-md-5" style="min-width: 200px;max-width: 20vw">
         <div class="card-header ">
@@ -51,12 +51,8 @@
 
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
-h1{
 
-  background-color: blue;
-
-}
 
 </style>

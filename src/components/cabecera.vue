@@ -8,7 +8,7 @@
         <div class="d-flex">
           <div class="mr-auto">
             <router-link class="btn btn-info" to="/addproductos" v-if="user.loggedIn">
-              <font-awesome-icon class="text-white fa-lg" icon="user" />   
+              <font-awesome-icon class="text-white fa-lg" icon="user-cog" />   
               <span class="ml-2"> Administrar</span>
             </router-link>
           </div>
@@ -22,7 +22,11 @@
           </div>
           <div>
             <div class="ml-4" v-if="!user.loggedIn">
-              <router-link class="btn btn-primary" to="/Login">Usuario</router-link>
+              <b-button variant="primary-color" to="/Login">
+              <font-awesome-icon class="text-white fa-lg" icon="user" />
+              <span class="ml-2"> Usuario
+              </span>
+              </b-button>
             </div>
             <div class="ml-4" v-else>
               <a class="btn btn-danger"  @click="logout"> Log out </a>
@@ -82,7 +86,6 @@
 
 </script>
 
-<style>
-
+<style scoped lang="scss">
 
 </style>
