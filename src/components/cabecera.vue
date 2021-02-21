@@ -21,10 +21,10 @@
             </router-link>
           </div>
           <div class="ml-4">
-            <router-link class="btn btn-primary" to="/Login">Log in</router-link>
+            <router-link class="btn btn-primary" to="/Login">Usuario</router-link>
           </div>
           <div class="ml-2">
-            <a class="btn btn-danger"> Log out </a>
+            <a class="btn btn-danger" v-if="!sesioniniciada" @click="logout"> Log out </a>
           </div>
         </div>
       </nav>
@@ -34,6 +34,8 @@
 
 <script lang="js">
 
+  import Firebase from '../db.js'
+
   export default  {
     name: 'cabecera',
     props: [],
@@ -42,15 +44,26 @@
     },
     data () {
       return {
-        datos:[]
+        datos:[],
+        user:{
+          loggedIn: false,
+          data:{}
+        }
 
       }
     },
     methods: {
 
+      logout(){
+        Firebase.logout()
+      }
+
     },
     computed: {
 
+      sesioniniciada(){
+        return this.user.loggedIn
+      }
 
     }
 }

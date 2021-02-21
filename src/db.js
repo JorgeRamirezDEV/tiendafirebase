@@ -1,6 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
-
+import 'firebase/auth'
 
 
 var firebaseConfig = {
@@ -15,3 +15,29 @@ var firebaseConfig = {
 export const db = firebase
   .initializeApp(firebaseConfig)
   .firestore()
+
+
+export default {
+    auth: firebase.auth(),
+    login() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider)
+      .then(function(result){
+        console.log(result);
+      })
+      .catch(function(error){
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.email;
+        const credential = error.credential;
+        console.log(errorCode,errorMessage, email,credential);
+      })
+    },
+    logout(){
+      firebase.auth().signOut()
+      .then(function() {})
+      .catch(function(error){
+        console.log(error)
+      })
+    }
+}

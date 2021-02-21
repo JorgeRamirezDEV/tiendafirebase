@@ -14,7 +14,7 @@
         </div>
         <a class="btn btn-primary  mt-4 mr-4"> Iniciar Sesión </a>
         <div>
-          <a class="btn btn-info  mt-4 ml-5 mx-2"> Google </a>
+          <a class="btn btn-info  mt-4 ml-5 mx-2" @click="login"> Google </a>
           <a class="btn btn-primary mt-4 mx-2"> Facebook </a>
           <a class="btn btn-danger float-right mt-4 mx-2"> Twitter </a>
         </div>
@@ -52,6 +52,8 @@
 
 <script lang="js">
 
+  import Firebase from '../db.js'
+
   export default  {
     name: 'login',
     props: [],
@@ -60,13 +62,24 @@
     },
     data () {
       return {
+        user:{
+          loggedIn: false,
+          data:{}
+        }
 
       }
     },
     methods: {
+      login(){
+        Firebase.login();
+      }
 
     },
     computed: {
+
+      sesioniniciada(){
+        return this.user.loggedIn
+      }
 
     }
 }
