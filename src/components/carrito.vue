@@ -75,7 +75,5 @@
 </script>
 
 <style>
- .carrito {
-   text-align: left;
- }
+
 </style>

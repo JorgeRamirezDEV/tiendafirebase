@@ -8,6 +8,7 @@
           <h5 class="font-weight-bold m-0">{{novedad.nombre}}</h5>
         </div>
         <img class="card-img-top bg-white border-bottom" style="height: 200px; object-fit: cover"  v-bind:src='novedad.imagen'>
+        <img class="card-img-top bg-white border-bottom" style="height: 200px; object-fit: cover"  v-bind:src='novedad.imagen2'>   
         <div class="card-body d-flex row justify-content-center">
           <h4 class="card-title text-primary font-weight-bold">{{novedad.precio}} €</h4>
           <p class="card-text">{{novedad.descripcion}}</p>

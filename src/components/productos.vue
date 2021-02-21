@@ -8,6 +8,7 @@
           <h5 class="font-weight-bold m-0">{{consola.nombre}}</h5>
         </div>
         <img class="card-img-top bg-white border-bottom" style="height: 200px; object-fit: cover" v-bind:src='consola.imagen'>
+        <img class="card-img-top bg-white border-bottom" style="height: 200px; object-fit: cover" v-bind:src='consola.imagen2'>
         <div class="card-body d-flex row justify-content-center">
           <h4 class="card-title text-primary font-weight-bold">{{consola.precio}} €</h4>
           <p class="card-text">{{consola.descripcion}}</p>
@@ -52,4 +53,5 @@
 </script>
 
 <style>
+
 </style>
