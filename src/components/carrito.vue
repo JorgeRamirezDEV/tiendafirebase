@@ -31,7 +31,7 @@
               <input type="number" style="max-width:50px">
             </div>
             <div class="col-md-1 col-4 ml-auto">
-              <p>
+              <p class="font-weight-bold">
                 Eliminar
               </p>
               <a class="btn btn-danger px-3">
