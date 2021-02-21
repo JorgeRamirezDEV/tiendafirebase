@@ -8,6 +8,14 @@
         <div class="d-flex">
           <div class="mr-auto">
             <router-link class="btn btn-info" to="/carrito">
+              <font-awesome-icon class="text-white fa-lg" icon="user" />   
+              <span class="ml-2"> Administrar</span>
+            </router-link>
+          </div>
+          <div class="mx-2">
+          </div>
+          <div class="mr-auto">
+            <router-link class="btn btn-info" to="/carrito">
               <font-awesome-icon class="text-white fa-lg" icon="shopping-cart" />   
               <span class="ml-2"> Carrito     </span>
             </router-link>
