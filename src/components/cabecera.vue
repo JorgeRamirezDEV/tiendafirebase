@@ -20,16 +20,19 @@
               <span class="ml-2"> Carrito     </span>
             </router-link>
           </div>
-          <div>
-            <div class="ml-4" >
+          <div class="row ml-3 ml-sm-5">
+            <div >
               <b-button to="/Login">
               <font-awesome-icon class="text-white fa-lg" icon="user" />
-              <span class="ml-2" v-if="user.loggedIn"> {{user.data.displayName}} </span>
-              <span class="ml-2" v-else> Usuario </span>
+              <span class="ml-2 d-none d-sm-inline" v-if="user.loggedIn"> {{user.data.displayName}} </span>
+              <span class="ml-2 d-none d-sm-inline" v-else> Usuario </span>
               </b-button>
             </div>
-            <div class="ml-4" v-if="user.loggedIn">
-              <a class="btn btn-danger"  @click="logout"> Log out </a>
+            <div class="ml-2" v-if="user.loggedIn">
+              <a class="btn btn-danger"  @click="logout">
+                <font-awesome-icon class="text-white fa-lg mr-2" icon="sign-out-alt" /> 
+                Salir 
+              </a>
             </div>
           </div>
         </div>

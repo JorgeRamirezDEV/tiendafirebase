@@ -62,13 +62,16 @@
 .card-img-bot {
   height: 200px;
   object-fit: cover;
-  display: block;
+  opacity: 1;
   top: 49px; 
   z-index: 1;
+  
 }
 
 .card:hover .card-img-top {
-        display: none;
+  opacity:0;
+  transition:1s;
+        
 }
 
 
