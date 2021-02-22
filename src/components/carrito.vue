@@ -2,7 +2,7 @@
 
   <section class="carrito" >
       <div class="shadow p-3 m-5 bg-white rounded border-primary border-bottom mx-auto" style="max-width: 1000px"> 
-        <h3 class="text-center mb-5 pb-2 ml-3 ml-md-5 font-weight-bold" >Carrito</h3>
+        <h3 class="text-center mb-5 pb-2 ml-3 ml-md-5 font-weight-bold" >Carrito ({{productoCarrito.length}})</h3>
         <div v-for="productosCesta in productoCarrito" v-bind:key="productosCesta.id" class="my-3">
           <div class="container row border shadow-sm ml-1 p-3 py-5 mb-5 bg-light rounded">
             <div class="col-md-2 col-8">
@@ -40,7 +40,7 @@
         </div>
         <div class="d-flex justify-content-end m-3">
           <a class="btn btn-info mr-3"> Vaciar carrito </a>
-          <a class="btn btn-primary"> Realizar Compra </a>     
+          <a class="btn btn-primary"> Realizar Compra </a>  
         </div>
       </div>
   </section>

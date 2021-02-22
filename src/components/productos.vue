@@ -12,7 +12,7 @@
         <div class="card-body d-flex row justify-content-center">
           <h4 class="card-title text-primary font-weight-bold">{{consola.precio}} €</h4>
           <p class="card-text">{{consola.descripcion}}</p>
-          <a class="btn btn-primary mt-auto" @click=" añadirCarrito(consola.nombre, consola.imagen, consola.precio, consola.id, consola.stock)" v-if="user.loggedIn">Añadir a la cesta </a>
+          <a class="btn btn-primary mt-auto" @click=" añadirCarrito(consola.nombre, consola.imagen, consola.precio, consola.id, consola.stock)" v-if="consola.stock>0&&user.loggedIn">Añadir a la cesta </a>
         </div>
       </div>
     </div>
