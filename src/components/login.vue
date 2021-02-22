@@ -41,9 +41,10 @@
         </div>
         <div class="form-group col-md-6 ">
           <label class="font-weight-bold mx-md-4">Repite la contraseña</label>
-          <input type="password" class="form-control mx-md-4">
+          <input type="password" v-model="contraseñacheck" class="form-control mx-md-4">
         </div>
-        <a class="btn btn-success mt-4" @click="registrar"> Registrarse </a>
+        <a class="btn btn-success mt-4" v-if="comprobarContraseña()" @click="registro"> Registrarse </a>
+        <small class="ml-2" v-else>Las contraseñas deben coincidir.</small>
       </div> 
     </div>
   </section>
@@ -52,6 +53,7 @@
 
 <script lang="js">
 
+  import firebase from 'firebase/app'
   import Firebase from '../db.js'
 
   export default  {
@@ -69,11 +71,19 @@
         apellidos:"",
         email:"",
         contraseña:"",
+        contraseñacheck:"",
         emaillog:"",
         contraseñalog:""
       }
     },
     methods: {
+      comprobarContraseña() {
+        if (this.contraseña==this.contraseñacheck&&this.contraseña!=""){
+        return true
+        }
+        else {return false}
+      },
+
       login() {
         Firebase.login(this.emaillog,this.contraseñalog)
         this.$router.replace({ name: "Middle" });
@@ -94,16 +104,24 @@
         this.$router.replace({ name: "Middle" });
       },
 
-      registrar(){
-        Firebase.registro(this.email,this.nombre,this.contraseña);
+      registro(){
+      firebase.auth().createUserWithEmailAndPassword(this.email,this.contraseña)
+      .then(data=>{
         this.$router.replace({ name: "Middle" });
         this.$notify({
           group: 'logout',
           type: 'success',
-          title: '¡Te has registrado con éxito!',
-          text: 'Ahora puedes comprar en nuestra tienda.'
-        });
-      }
+          title: 'Te has resgistrado!',
+          text: 'Has sido deslogueado de manera exitosa, ¡esperamos verte pronto!'
+        })
+        data.user
+        .updateProfile({
+          displayName: this.nombre
+        })
+        .then(() => {});
+      })
+        
+    }
 
     },
     computed: {

@@ -77,17 +77,6 @@ export default {
       .catch(function(error){
         console.log(error)
       })
-    },
-
-    registro(email,nombre,contraseña){
-      firebase.auth().createUserWithEmailAndPassword(email,contraseña)
-      .then(data=>{
-        data.user
-        .updateProfile({
-          displayName: nombre
-        })
-        .then(() => {});
-      })
     }
     
      
