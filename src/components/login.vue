@@ -97,6 +97,12 @@
       registrar(){
         Firebase.registro(this.email,this.nombre,this.contraseña);
         this.$router.replace({ name: "Middle" });
+        this.$notify({
+          group: 'logout',
+          type: 'success',
+          title: '¡Te has registrado con éxito!',
+          text: 'Ahora puedes comprar en nuestra tienda.'
+        });
       }
 
     },
