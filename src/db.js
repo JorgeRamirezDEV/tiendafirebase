@@ -70,14 +70,6 @@ export default {
         const credential = error.credential;
         console.log(errorCode,errorMessage, email,credential);
       })
-    },
-
-    logout(){
-      firebase.auth().signOut()
-      .then(function() {})
-      .catch(function(error){
-        console.log(error)
-      })
     }
     
      

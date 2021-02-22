@@ -43,7 +43,7 @@
 
 <script lang="js">
 
-  import firebase from '../db.js'
+
   import Firebase from 'firebase'
 
   export default  {
@@ -78,18 +78,20 @@
     methods: {
 
       logout(){
-        firebase.logout()
-        this.$router.replace({ name: "Middle" });
-        this.$notify({
-          group: 'logout',
-          type: 'success',
-          title: '¡Adios!',
-          text: 'Has sido deslogueado de manera exitosa, ¡esperamos verte pronto!'
-        });
+        Firebase.auth().signOut().then(() =>{
+          this.$router.push({name: 'Middle'})
+          this.$notify({
+            group: 'logout',
+            type: 'success',
+            title: '¡Adios!',
+            text: 'Has sido deslogueado de manera exitosa, ¡esperamos verte pronto!'
+          })
+        })
       }
-
     },
     computed: {
+      
+
     }
 }
 
