@@ -4,10 +4,10 @@
     <div class="mt-5 pt-5">
       <div class="mb-4">
         <a href="https://github.com/JorgeRamirezDEV" target="_blank"> 
-          <font-awesome-icon size="2x" :icon="['fab', 'github-square']" /> 
+          <font-awesome-icon size="2x" :icon="['fab', 'github']" /> 
         </a>
         <a class="ml-4" href="https://twitter.com/GameStop?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"> 
-          <font-awesome-icon size="2x" :icon="['fab', 'twitter-square']" />
+          <font-awesome-icon size="2x" :icon="['fab', 'twitter']" />
         </a>
       </div>
       <div class="mb-3">
