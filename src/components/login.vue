@@ -14,9 +14,9 @@
         </div>
         <a class="btn btn-primary mt-4 mr-4" @click="login"> Iniciar Sesión </a>
         <div>
-          <a class="btn btn-info  mt-4 ml-5 mx-2" @click="logingoogle"> Google </a>
-          <a class="btn btn-primary mt-4 mx-2" @click="loginfacebook"> Facebook </a>
-          <a class="btn btn-danger float-right mt-4 mx-2" @click="logintwitter"> Twitter </a>
+          <a class="btn btn-danger  mt-4 ml-5 mx-2" @click="logingoogle"> <font-awesome-icon size="lg" :icon="['fab', 'google']" /> </a>
+          <a class="btn btn-primary mt-4 mx-2" @click="loginfacebook"> <font-awesome-icon size="lg" :icon="['fab', 'facebook-square']" /> </a>
+          <a class="btn btn-info float-right mt-4 mx-2" @click="logintwitter"> <font-awesome-icon size="lg" :icon="['fab', 'twitter']" /> </a>
         </div>
       </div>
       <h3 class="text-center my-5 pb-2 ml-3 ml-md-5 font-weight-bold"> Registro </h3>
