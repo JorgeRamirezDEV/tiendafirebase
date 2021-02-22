@@ -15,7 +15,7 @@
         <a class="btn btn-primary mt-4 mr-4" @click="login"> Iniciar Sesión </a>
         <div>
           <a class="btn btn-info  mt-4 ml-5 mx-2" @click="logingoogle"> Google </a>
-          <a class="btn btn-primary mt-4 mx-2"> Facebook </a>
+          <a class="btn btn-primary mt-4 mx-2" @click="loginfacebook"> Facebook </a>
           <a class="btn btn-danger float-right mt-4 mx-2" @click="logintwitter"> Twitter </a>
         </div>
       </div>
@@ -76,6 +76,11 @@
     methods: {
       login() {
         Firebase.login(this.emaillog,this.contraseñalog)
+        this.$router.replace({ name: "Middle" });
+      },
+
+      loginfacebook(){
+        Firebase.loginfacebook();
         this.$router.replace({ name: "Middle" });
       },
 
