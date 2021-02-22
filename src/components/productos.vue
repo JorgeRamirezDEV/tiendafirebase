@@ -12,7 +12,7 @@
         <div class="card-body d-flex row justify-content-center">
           <h4 class="card-title text-primary font-weight-bold">{{consola.precio}} €</h4>
           <p class="card-text">{{consola.descripcion}}</p>
-          <a href="" class="btn btn-primary mt-auto" v-if="user.loggedIn">Añadir a la cesta </a>
+          <a class="btn btn-primary mt-auto" @click=" añadirCarrito(consola.nombre, consola.imagen, consola.precio, consola.id, consola.stock)" v-if="user.loggedIn">Añadir a la cesta </a>
         </div>
       </div>
     </div>
@@ -55,7 +55,28 @@
       }
     },
     methods: {
-
+        añadirCarrito(nombre,foto,precio,id,stock){
+        this.div=false;
+        db.collection("carrito").doc(nombre+" - "+this.user.data.email).set({
+          nombre: nombre,
+          precio: precio,
+          imagen: foto,
+          cantidadProd: 1,
+          productID: id,
+          stock: stock,
+          usuarioID: this.user.data.email
+        })
+        .then(() => {
+          this.$notify({
+          group: 'logout',
+          type: 'success',
+          title: 'Se ha añadido al carrito'
+        })
+        })
+        .catch((error) => {
+          console.error("no funca", error);
+        });
+      }
     },
     computed: {
 
