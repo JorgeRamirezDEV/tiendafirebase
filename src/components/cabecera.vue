@@ -79,6 +79,7 @@
 
       logout(){
         firebase.logout()
+        this.$router.replace({ name: "Middle" });
         this.$notify({
           group: 'logout',
           type: 'success',
