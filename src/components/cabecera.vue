@@ -22,7 +22,7 @@
           </div>
           <div class="row ml-3 ml-sm-5">
             <div >
-              <b-button to="/Login">
+              <b-button variant="primary" to="/Login">
               <font-awesome-icon class="text-white fa-lg" icon="user" />
               <span class="ml-2 d-none d-sm-inline" v-if="user.loggedIn"> {{user.data.displayName}} </span>
               <span class="ml-2 d-none d-sm-inline" v-else> Usuario </span>
