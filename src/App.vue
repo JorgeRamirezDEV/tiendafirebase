@@ -4,6 +4,7 @@
     <router-view/>
     <novedades/>
     <pie/>
+    <notifications group="logout" position="top center"/>
   </div>
 </template>
 

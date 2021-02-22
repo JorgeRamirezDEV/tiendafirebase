@@ -79,6 +79,12 @@
 
       logout(){
         firebase.logout()
+        this.$notify({
+          group: 'logout',
+          type: 'success',
+          title: '¡Adios!',
+          text: 'Has sido deslogueado de manera exitosa, ¡esperamos verte pronto!'
+        });
       }
 
     },
