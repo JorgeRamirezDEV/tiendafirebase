@@ -12,7 +12,7 @@
         <div class="card-body d-flex row justify-content-center">
           <h4 class="card-title text-primary font-weight-bold">{{consola.precio}} €</h4>
           <p class="card-text">{{consola.descripcion}}</p>
-          <a href="" class="btn btn-primary mt-auto">Añadir a la cesta </a>
+          <a href="" class="btn btn-primary mt-auto" v-if="user.loggedIn">Añadir a la cesta </a>
         </div>
       </div>
     </div>
@@ -24,18 +24,34 @@
 
 <script lang="js">
 
-
+  import Firebase from 'firebase'
   import {db} from '../db.js'
   export default  {
     name: 'productos',
     props: [],
     mounted () {
 
+      Firebase.auth().onAuthStateChanged(user => {
+        if (user){
+          this.user.loggedIn = true;
+          this.user.data = user;
+          
+        }
+        else{
+          this.user.loggedIn = false;
+          this.user.data = {};
+          
+        }
+      })
+
     },
     data () {
       return {
-        datos:[]
-
+        datos:[],
+        user:{
+          loggedIn: false,
+          data:{}
+        }
       }
     },
     methods: {

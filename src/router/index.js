@@ -37,7 +37,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.matched.some(record => record.meta.requiresAuth)){
+  if (to.matched.some(vista => vista.meta.requiresAuth)){
     if(!Firebase.auth.currentUser){
       next('/')
     } else{
@@ -47,5 +47,7 @@ router.beforeEach((to, from, next) => {
     next()
   }
 })
+
+
 
 export default router
