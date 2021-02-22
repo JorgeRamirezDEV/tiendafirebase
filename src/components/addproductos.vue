@@ -28,7 +28,11 @@
             <input type="number" class="form-control mx-auto" style="max-width: 200px">
           </div>
           <div class="form-group border-top pt-4 mb-5 ">
-            <label>Foto</label>
+            <label>Imagen</label>
+            <input type="file" class="form-control-file mx-auto" style="max-width: 400px">
+          </div>
+          <div class="form-group border-top pt-4 mb-5 ">
+            <label>Imagen 2</label>
             <input type="file" class="form-control-file mx-auto" style="max-width: 400px">
           </div>
           <div class="form-group border-top  py-5">
@@ -51,7 +55,7 @@
           </div>
           <div class="my-3">
             <h5> Stock </h5> 
-            <input type="text" v-bind:value='novedad.stock'>
+            <input type="number" v-bind:value='novedad.stock'>
             <a class="btn btn-success mx-2 p-1">Actualizar</a>
           </div>
           <div class="my-3">
@@ -72,7 +76,7 @@
           </div>
           <div class="my-3">
             <h5> Stock </h5> 
-            <input type="text" v-bind:value='consola.stock'>
+            <input type="number" v-bind:value='consola.stock'>
             <a class="btn btn-success mx-2 p-1">Actualizar</a>
           </div>
           <div class="my-3">

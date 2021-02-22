@@ -6,15 +6,15 @@
       <div class="form-row pb-5 m-md-5 m-2 border-bottom">
         <div class="form-group col-md-6">
           <label class="font-weight-bold">Email</label>
-          <input type="email" class="form-control">
+          <input type="email" v-model="emaillog" class="form-control">
         </div>
         <div class="form-group col-md-6 ">
           <label class="font-weight-bold ml-md-4">Password</label>
-          <input type="password" class="form-control  ml-md-4">
+          <input type="password" v-model="contraseñalog" class="form-control  ml-md-4">
         </div>
-        <a class="btn btn-primary  mt-4 mr-4"> Iniciar Sesión </a>
+        <a class="btn btn-primary mt-4 mr-4" @click="login"> Iniciar Sesión </a>
         <div>
-          <a class="btn btn-info  mt-4 ml-5 mx-2" @click="login"> Google </a>
+          <a class="btn btn-info  mt-4 ml-5 mx-2" @click="logingoogle"> Google </a>
           <a class="btn btn-primary mt-4 mx-2"> Facebook </a>
           <a class="btn btn-danger float-right mt-4 mx-2" @click="logintwitter"> Twitter </a>
         </div>
@@ -23,27 +23,27 @@
       <div class="form-row m-md-5 m-2">
         <div class="form-group col-md-6">
           <label class="font-weight-bold">Nombre</label>
-          <input type="name"  class="form-control">
+          <input type="name" v-model="nombre" class="form-control">
         </div>
         <div class="form-group col-md-6 ">
           <label class="font-weight-bold mx-md-4">Apellidos</label>
-          <input type="surname"  class="form-control ml-md-4">
+          <input type="surname" v-model="apellidos" class="form-control ml-md-4">
         </div>
         <div class="form-group col-md-6">
           <label class="font-weight-bold">Email</label>
-          <input type="email" class="form-control" style="max-width: 500px">
+          <input type="email" v-model="email" class="form-control" style="max-width: 500px">
         </div>
         <div class="form-group col-md-6">
         </div>
         <div class="form-group col-md-6">
           <label class="font-weight-bold">Contraseña</label>
-          <input type="password" class="form-control">
+          <input type="password" v-model="contraseña" class="form-control">
         </div>
         <div class="form-group col-md-6 ">
           <label class="font-weight-bold mx-md-4">Repite la contraseña</label>
           <input type="password" class="form-control mx-md-4">
         </div>
-        <a class="btn btn-success mt-4"> Registrarse </a>
+        <a class="btn btn-success mt-4" @click="registrar"> Registrarse </a>
       </div> 
     </div>
   </section>
@@ -64,16 +64,34 @@
       return {
         user:{
           data:{}
-        }
-
+        },
+        nombre:"",
+        apellidos:"",
+        email:"",
+        contraseña:"",
+        emaillog:"",
+        contraseñalog:""
       }
     },
     methods: {
-      login(){
-        Firebase.login();
+      login() {
+        Firebase.login(this.emaillog,this.contraseñalog)
+        this.$router.replace({ name: "Middle" });
       },
+
+      logingoogle(){
+        Firebase.logingoogle();
+        this.$router.replace({ name: "Middle" });
+      },
+
       logintwitter(){
         Firebase.logintwitter();
+        this.$router.replace({ name: "Middle" });
+      },
+
+      registrar(){
+        Firebase.registro(this.email,this.nombre,this.contraseña);
+        this.$router.replace({ name: "Middle" });
       }
 
     },

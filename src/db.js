@@ -20,7 +20,12 @@ export const db = firebase
 
 export default {
     auth: firebase.auth(),
-    login() {
+
+    login(email,contraseña){
+      firebase.auth().signInWithEmailAndPassword(email,contraseña)
+    },
+
+    logingoogle() {
       var provider = new firebase.auth.GoogleAuthProvider();
       firebase.auth().signInWithPopup(provider)
       .then(function(result){
@@ -55,6 +60,17 @@ export default {
       .then(function() {})
       .catch(function(error){
         console.log(error)
+      })
+    },
+
+    registro(email,nombre,contraseña){
+      firebase.auth().createUserWithEmailAndPassword(email,contraseña)
+      .then(data=>{
+        data.user
+        .updateProfile({
+          displayName: nombre
+        })
+        .then(() => {});
       })
     }
     

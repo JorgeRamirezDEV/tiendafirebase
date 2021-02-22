@@ -21,14 +21,14 @@
             </router-link>
           </div>
           <div>
-            <div class="ml-4" v-if="!user.loggedIn">
-              <b-button variant="primary-color" to="/Login">
+            <div class="ml-4" >
+              <b-button to="/Login">
               <font-awesome-icon class="text-white fa-lg" icon="user" />
-              <span class="ml-2"> Usuario
-              </span>
+              <span class="ml-2" v-if="user.loggedIn"> {{user.data.displayName}} </span>
+              <span class="ml-2" v-else> Usuario </span>
               </b-button>
             </div>
-            <div class="ml-4" v-else>
+            <div class="ml-4" v-if="user.loggedIn">
               <a class="btn btn-danger"  @click="logout"> Log out </a>
             </div>
           </div>
