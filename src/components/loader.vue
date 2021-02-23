@@ -2,7 +2,7 @@
 
   <section class="loader d-flex justify-content-center">
     <div class="lds-ripple"><div></div><div></div></div> 
-    <div class="d-flex align-items-center" style="margin-left: 100px;">Cargando... </div>
+    <div class="d-flex align-items-center" style="margin-left: 50px;">Cargando... </div>
   </section>
 
 </template>

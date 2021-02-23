@@ -36,7 +36,7 @@ export default {
   },
 
   firestore: {
-      dato:db.collection('consolas')
+      datos:db.collection('consolas')
     }
   
 }
