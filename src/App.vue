@@ -28,7 +28,6 @@ export default {
 
 <style lang="scss">
 
-@import "./scss/custom-bootstrap";
 @import "./scss/_mixins";
 @import "./scss/_variables";
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DotGothic16&family=Open+Sans&family=Permanent+Marker&display=swap');

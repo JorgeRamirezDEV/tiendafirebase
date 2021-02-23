@@ -28,7 +28,7 @@
               <h5 class="font-weight-bold">
                 Cantidad
               </h5>
-              <input type="number" style="max-width:50px" v-bind:value="productosCesta.cantidadProd">
+              <input type="number" style="max-width:50px" v-bind:value="productosCesta.cantidadProd" :max="productosCesta.stock" min="0">
             </div>
             <div class="col-md-1 col-4 m-auto">
               <a @click="borrarProducto(productosCesta.id)" class="btn btn-danger py-2">
@@ -57,11 +57,27 @@
     name: 'carrito',
     props: [],
     mounted () {
+      firebase.auth.onAuthStateChanged(user=>{
+        if (user){
+          this.user.loggedIn = true;
+          this.user.data = user;
+          this.$bind('productoCarrito',db.collection('carrito').where("usuarioID","==",firebase.auth.currentUser.email))
+        }else{
+          this.user.loggedIn = false;
+          this.user.data = user;
+          this.$bind('productoCarrito',db.collection('carrito').where("usuarioID","==",""))
+
+        }
+      })
 
     },
     data () {
       return {
-        productoCarrito:[]
+        productoCarrito:[],
+        user: {
+          loggedIn: false,
+          data: {}
+        }
 
       }
     },
