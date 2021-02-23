@@ -1,15 +1,22 @@
 <template>
   <div id="app">
-    <cabecera/>
-    <router-view/>
-    <novedades/>
-    <pie/>
-    <notifications group="logout" position="top center"/>
+    <div v-if="!datos">
+      <loader/>
+    </div>
+    <div v-if="datos">
+      <cabecera/>
+      <router-view/>
+      <novedades/>
+      <pie/>
+      <notifications group="logout" position="top center"/>
+    </div>
   </div>
 </template>
 
 <script>
 
+import {db} from "./db.js"
+import loader from './components/loader.vue'
 import cabecera from './components/cabecera.vue'
 import novedades from './components/novedades.vue'
 import pie from './components/pie.vue'
@@ -19,8 +26,18 @@ export default {
   components: {
     cabecera,
     pie,
-    novedades
-  }
+    novedades,
+    loader
+  },
+  data(){
+    return{
+      datos:null
+    }
+  },
+
+  firestore: {
+      dato:db.collection('consolas')
+    }
   
 }
 </script>
