@@ -33,6 +33,10 @@ export default {
 @import "./scss/_variables";
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DotGothic16&family=Open+Sans&family=Permanent+Marker&display=swap');
 
+html{
+  margin:0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
