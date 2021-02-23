@@ -45,7 +45,12 @@
 </script>
 
 <style scoped lang="scss">
+ 
+ 
  @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+// Animacion de redes sociales
 
 body {
     margin: 0;
