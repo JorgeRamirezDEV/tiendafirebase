@@ -29,7 +29,7 @@
               </b-button>
             </div>
             <div class="ml-2" v-if="user.loggedIn">
-              <a class="btn btn-danger"  @click="logout">
+              <a class="btn btn-danger" @click="logout">
                 <font-awesome-icon class="text-white fa-lg mr-2" icon="sign-out-alt" /> 
                 Salir 
               </a>
@@ -99,5 +99,6 @@
 </script>
 
 <style scoped lang="scss">
+
 
 </style>

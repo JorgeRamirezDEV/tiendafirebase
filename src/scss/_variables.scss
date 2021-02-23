@@ -1,18 +1,32 @@
 // // creamos la paleta de colores que usaremos para nuestra página web
 
+$colors: (
+    primario: rgb(111, 212, 111),
+    secundario: rgb(88, 88, 206),    
+    apoyo: rgb(41, 41, 41)
+);
 
-$color1: rgb(111, 212, 111);
-$color2: rgb(48, 179, 48);
-$color3: rgb(78, 78, 194);
+@function color ($color-name){
+    @return map-get($colors, $color-name);
+}
 
+//fondo orteraco
+
+$fondofeo: url("../assets/pattern.png");
+$fondofeo2: url("../assets/pattern.jpg");
+
+// Tipografía 2
+$fuentetitulo: 'Anton', sans-serif;
+$fuente2: 'Open Sans', sans-serif;
+$fuenteretro:  'DotGothic16', sans-serif;
 
 /// Bootstrap color variables
 $theme-colors: () !default;
 $theme-colors: map-merge(
     (
-        "primary-color": $color1,
-        "secondary-color": $color2,
-        "tertiary-color": $color3
+        "primary-color": color(primario),
+        "secondary-color": color(secundario),
+        "tertiary-color": color(apoyo)
     ),
     $theme-colors
 );
