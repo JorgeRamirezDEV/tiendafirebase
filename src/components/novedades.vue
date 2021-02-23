@@ -12,7 +12,7 @@
         <div class="card-body d-flex row justify-content-center">
           <h4 class="card-title font-weight-bold">{{novedad.precio}} €</h4>
           <p class="card-text">{{novedad.descripcion}}</p>
-          <a href="" class="btn btn-danger mt-auto" v-if="user.loggedIn">Saber más</a>
+          <a class="btn btn-danger mt-auto" v-if="user.loggedIn">Saber más</a>
         </div>
       </div>
     </div>

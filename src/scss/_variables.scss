@@ -23,13 +23,3 @@ $fuentetitulo: 'Anton', sans-serif;
 $fuente2: 'Open Sans', sans-serif;
 $fuenteretro:  'DotGothic16', sans-serif;
 
-/// Bootstrap color variables
-$theme-colors: () !default;
-$theme-colors: map-merge(
-    (
-        "primary-color": color(primario),
-        "secondary-color": color(secundario),
-        "tertiary-color": color(apoyo)
-    ),
-    $theme-colors
-);

@@ -47,7 +47,7 @@ html{
 
 h1 {
   font-family: $fuenteretro;
-  color: color(secundario)
+  color: color(secundario);
 }
 
 </style>
