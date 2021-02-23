@@ -43,7 +43,7 @@
     </div>
     <div class="shadow p-3 m-5 bg-white rounded mx-auto border-primary border-bottom" style="max-width: 1000px">
       <h1 class="my-3"> Editar productos </h1>
-      <h2> Sección de Ofertas </h2>
+      <h2> Sección de Novedades </h2>
     <div class="row my-5 pb-5 mx-0 justify-content-center border-bottom">
       <div class="shadow-sm p-3 m-2 bg-white rounded border" v-for="novedad in datos" v-bind:key="novedad.id">
           <div>   

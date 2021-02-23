@@ -2,8 +2,11 @@
 
 $colors: (
     primario: rgb(111, 212, 111),
-    secundario: rgb(88, 88, 206),    
-    apoyo: rgb(41, 41, 41)
+    secundario: rgb(83, 83, 182), 
+    apoyo: rgb(41, 41, 41),
+    apoyo2: rgb(43, 43, 59)
+
+
 );
 
 @function color ($color-name){

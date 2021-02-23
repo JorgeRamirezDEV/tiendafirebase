@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 
   <section class="pie bg-light py-5 border-top">
     <div>
